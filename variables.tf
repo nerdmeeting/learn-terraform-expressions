@@ -1,5 +1,8 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
+variable "project_version" {
+  description = "Version of project"
+  type = string
+  default = "0.1.0"
+}
 
 variable "cidr_vpc" {
   description = "CIDR block for the VPC"
@@ -31,3 +34,8 @@ variable "team" {
   default     = "hashicorp"
 }
 
+variable "high_availability" {
+  type = bool
+  description = "If this is a multiple instance deployment, choose `true` to deploy 3 instances."
+  default = true
+}
