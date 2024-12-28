@@ -1,6 +1,6 @@
-output "tags" {
-  description = "Instance tags"
-  value       = aws_instance.ubuntu.tags
+output "first_tags" {
+  description = "Instance tags for the first instance"
+  value       = aws_instance.ubuntu[0].tags
 }
 
 output "private_addresses" {
